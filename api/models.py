@@ -13,4 +13,4 @@ class Student(models.Model):
         return f'{self.first_name} {self.last_name}'
 class StudentImage(models.Model):
     student = models.ForeignKey(Student, on_delete=models.CASCADE, related_name='images')
-    image = models.ImageField(upload_to='online_university/images')
+    image = models.ImageField(upload_to='api/images')
